@@ -11,6 +11,7 @@ function buildTable(data){
     // loop through each object in data
     // and append a row and cell for each value on thje row
     data.forEach((dataRow)=>{
+        // Append a row to the table body
         let row = tbody.append("tr");
 
         // loop through each file din the data Row and add
@@ -19,11 +20,11 @@ function buildTable(data){
          let cell = row.append("td");
          cell.text(val);   
         }
-    );
+      );
     });
 }
 
-function handelClick(){
+function handleClick(){
     // grab the datetime value from the filter
     let date = d3.select('#datetime').property('value');
     let filteredData = tableData ;
@@ -31,14 +32,14 @@ function handelClick(){
     // filter with date entered 
     if(date){
     // apply filter to tbl data to keep rows where datetime matches filter
-        filterData = filteredData.filter(row=> row.datetime === date);
+      filterData = filteredData.filter(row=> row.datetime === date);
     };
 
     // reuild the table using the filtered data 
     //NOTE if no date was enetered , then filterdata will just be the original tabledata
     buildTable(filteredData);
+    };
 
-};
 // attach even to lstn 4 the form button
 d3.selectAll("#filter-btn").on("click", handleClick);
 
