@@ -32,12 +32,12 @@ function handleClick(){
     // filter with date entered 
     if(date){
     // apply filter to tbl data to keep rows where datetime matches filter
-      filterData = filteredData.filter(row=> row.datetime === date);
+      filterData = filteredData.filter(row => row.datetime === date);
     };
 
     // reuild the table using the filtered data 
     //NOTE if no date was enetered , then filterdata will just be the original tabledata
-    buildTable(filteredData);
+    buildTable(filterData);
     };
 
 // attach even to lstn 4 the form button

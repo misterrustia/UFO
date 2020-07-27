@@ -1,17 +1,19 @@
-// Get a reference to the table body
+3// Get a reference to the table body
 let tbody = d3.select("tbody");
 
 // Console.log the weather data from data.js
 console.log(data);
 
 // // Step 1: Loop Through `data` and console.log each weather report object
-// data.forEach(function(weatherReport) {
+// data.forEach(
+//   function(weatherReport) {
 //   console.log(weatherReport);
 // });
 
 // // Step 2:  Use d3 to append one table row `tr` for each weather report object
 // // Don't worry about adding cells or text yet, just try appending the `tr` elements.
-// data.forEach(function(weatherReport) {
+// data.forEach(
+//   function(weatherReport) {
 //   console.log(weatherReport);
 //   let row = tbody.append("tr");
 // });
